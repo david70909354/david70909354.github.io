@@ -12,7 +12,7 @@
         .appliance-button {
             border: 2px solid transparent; transition: all 0.2s ease-in-out;
             display: flex; flex-direction: column; align-items: center; justify-content: center;
-            text-align: center; height: 110px; /* Reducido */ background-color: #f9fafb; border-color: #e5e7eb;
+            text-align: center; height: 110px; background-color: #f9fafb; border-color: #e5e7eb;
         }
         .appliance-button img { max-height: 45px; margin-bottom: 0.4rem; object-fit: contain; }
         .appliance-button span { font-size: 0.7rem; line-height: 1.1; color: #4b5563; }
@@ -21,7 +21,6 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
         }
         .appliance-button.selected span { font-weight: 600; color: #3730a3; }
-        /* Lista de electrodomésticos añadidos */
         #appliance-list { background-color: #f8fafc; min-height: 100px; max-height: 250px; overflow-y: auto; }
         .appliance-item { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0.75rem; border-bottom: 1px dashed #e2e8f0; font-size: 0.85rem; }
         .appliance-item:last-child { border-bottom: none; }
@@ -32,27 +31,23 @@
         }
         .remove-appliance-btn:hover { background-color: #dc2626; }
         #empty-list-msg { color: #6b7280; font-style: italic; text-align: center; padding: 1rem; }
-        /* Resultados totales */
-        #total-results { background-color: #e0f2fe; border-color: #7dd3fc; } /* Azul claro */
-        #total-results h2 { color: #0369a1; } /* Azul oscuro */
+        #total-results { background-color: #e0f2fe; border-color: #7dd3fc; }
+        #total-results h2 { color: #0369a1; }
         #total-results .result-item span { color: #075985; }
-        #total-results .result-item span:last-child { color: #0c4a6e; } /* Azul más oscuro */
-        /* NUEVO: Estilo para logos */
+        #total-results .result-item span:last-child { color: #0c4a6e; }
         .logo-img {
-            height: 100px; /* Tamaño ajustado */
+            height: 100px;
             width: auto;
             object-fit: contain;
         }
         .hidden { display: none; }
-
-
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head> 
-<body class="bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 min-h-screen flex flex-col items-center justify-center p-6">
+</head> <!-- ✅ Aquí cerramos correctamente el <head> -->
 
+<body class="bg-gradient-to-br from-blue-100 via-indigo-100 to-purple-100 min-h-screen flex flex-col items-center justify-center p-6">
     <header class="w-full max-w-4xl mb-6 px-4">
         <div class="flex justify-between items-center bg-white p-3 rounded-lg shadow-md space-x-4">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Sena_Colombia_logo.svg"
